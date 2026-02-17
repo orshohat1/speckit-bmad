@@ -180,6 +180,10 @@ Review          │ BMAD        │ Code review workflow with fresh context +
 
 5. **Adopt BMAD's story-per-file pattern for context isolation.** Instead of Spec Kit's single 340-line tasks.md, break each user story into its own file with embedded acceptance criteria. This prevents context overflow during implementation and enables parallel development.
 
+6. **Create custom Spec Kit agents for domain-specific expertise.** Spec Kit's agents (`speckit.specify`, `speckit.plan`, `speckit.implement`, etc.) are generic by design — they handle workflow mechanics but carry no domain knowledge. Borrow BMAD's role-specialization concept by adding custom agent files (`.github/agents/`) that inject domain expertise into specific phases of the Spec Kit flow.
+
+   For example: a `speckit.security-review` agent that runs after `implement` and audits code against OWASP guidelines, a `speckit.perf-check` agent that validates algorithmic complexity against plan constraints, or a `speckit.domain-expert` agent loaded with business rules that validates spec completeness before planning begins. Each custom agent is just a markdown file with a description and structured instructions — no workflow engine required. This gives you BMAD's "different eyes on different phases" benefit (PM challenges requirements, Architect validates design, TEA reviews tests) while keeping Spec Kit's lean, tool-agnostic architecture. The developer still orchestrates which agent to invoke and when, but each agent brings focused expertise rather than being a generalist.
+
 ---
 
 ## 7. Summary
