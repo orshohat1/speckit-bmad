@@ -1,0 +1,142 @@
+{
+  "description": "Input/output JSON schemas for the AI Highlight Selector",
+  "input_schema": {
+    "type": "object",
+    "required": ["events"],
+    "properties": {
+      "events": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["id", "type"],
+          "properties": {
+            "id": { "type": "string", "description": "Unique event identifier" },
+            "type": { "type": "string", "description": "Event type (e.g., dunk, three_pointer, block)" },
+            "timestamp": { "type": "string", "description": "Game clock (e.g., Q4 02:15)" },
+            "quarter": { "type": "integer", "minimum": 1, "maximum": 4 },
+            "player": { "type": "string", "description": "Player name" },
+            "team": { "type": "string", "description": "Team name" },
+            "description": { "type": "string", "description": "Human-readable description" },
+            "importance": { "type": "string", "enum": ["critical", "high", "medium", "low"] },
+            "tags": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      },
+      "user_preferences": {
+        "type": "object",
+        "properties": {
+          "favorite_player": { "type": ["string", "null"] },
+          "favorite_team": { "type": ["string", "null"] }
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["highlights", "metadata"],
+    "properties": {
+      "highlights": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["event", "rank", "score", "explanation"],
+          "properties": {
+            "event": { "$ref": "#/input_schema/properties/events/items" },
+            "rank": { "type": "integer", "minimum": 1 },
+            "score": { "type": "integer", "minimum": 0 },
+            "explanation": { "type": "string", "minLength": 1 }
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "required": ["total_events", "selected_count", "preferences"],
+        "properties": {
+          "total_events": { "type": "integer" },
+          "selected_count": { "type": "integer" },
+          "preferences": {
+            "type": "object",
+            "properties": {
+              "favorite_player": { "type": ["string", "null"] },
+              "favorite_team": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  },
+  "sample_input": {
+    "events": [
+      {
+        "id": "evt-014",
+        "type": "dunk",
+        "timestamp": "Q4 11:30",
+        "quarter": 4,
+        "player": "LeBron James",
+        "team": "Lakers",
+        "description": "LeBron finishes with a game-winning dunk!",
+        "importance": "critical",
+        "tags": ["game_winner", "clutch", "highlight_reel"]
+      },
+      {
+        "id": "evt-009",
+        "type": "three_pointer",
+        "timestamp": "Q3 10:30",
+        "quarter": 3,
+        "player": "Jayson Tatum",
+        "team": "Celtics",
+        "description": "Jayson Tatum nails a step-back three.",
+        "importance": "high",
+        "tags": ["clutch", "step_back"]
+      }
+    ],
+    "user_preferences": {
+      "favorite_player": "LeBron James",
+      "favorite_team": null
+    }
+  },
+  "sample_output": {
+    "highlights": [
+      {
+        "event": {
+          "id": "evt-014",
+          "type": "dunk",
+          "timestamp": "Q4 11:30",
+          "quarter": 4,
+          "player": "LeBron James",
+          "team": "Lakers",
+          "description": "LeBron finishes with a game-winning dunk!",
+          "importance": "critical",
+          "tags": ["game_winner", "clutch", "highlight_reel"]
+        },
+        "rank": 1,
+        "score": 220,
+        "explanation": "This critical dunk by LeBron James was a defining moment of the game. Sealed the victory, in a clutch fourth-quarter moment, a highlight-reel play, featuring your favorite player, LeBron James."
+      },
+      {
+        "event": {
+          "id": "evt-009",
+          "type": "three_pointer",
+          "timestamp": "Q3 10:30",
+          "quarter": 3,
+          "player": "Jayson Tatum",
+          "team": "Celtics",
+          "description": "Jayson Tatum nails a step-back three.",
+          "importance": "high",
+          "tags": ["clutch", "step_back"]
+        },
+        "rank": 2,
+        "score": 95,
+        "explanation": "A high-impact three pointer by Jayson Tatum that made a significant difference. In a clutch moment."
+      }
+    ],
+    "metadata": {
+      "total_events": 2,
+      "selected_count": 2,
+      "preferences": {
+        "favorite_player": "LeBron James",
+        "favorite_team": null
+      }
+    }
+  }
+}
