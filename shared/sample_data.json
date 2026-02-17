@@ -1,0 +1,193 @@
+{
+  "game": {
+    "id": "game-2026-finals-07",
+    "title": "NBA Finals Game 7 — Lakers vs Celtics",
+    "date": "2026-06-18",
+    "venue": "Crypto.com Arena, Los Angeles",
+    "final_score": {
+      "home": { "team": "Lakers", "score": 112 },
+      "away": { "team": "Celtics", "score": 108 }
+    }
+  },
+  "events": [
+    {
+      "id": "evt-001",
+      "type": "three_pointer",
+      "timestamp": "Q1 02:34",
+      "quarter": 1,
+      "player": "LeBron James",
+      "team": "Lakers",
+      "description": "LeBron James drains a deep three-pointer from the logo to open the scoring.",
+      "importance": "high",
+      "tags": ["clutch", "logo_shot", "momentum"]
+    },
+    {
+      "id": "evt-002",
+      "type": "block",
+      "timestamp": "Q1 05:12",
+      "quarter": 1,
+      "player": "Anthony Davis",
+      "team": "Lakers",
+      "description": "Anthony Davis rejects Jayson Tatum at the rim with a massive chase-down block.",
+      "importance": "high",
+      "tags": ["defensive", "highlight_reel", "chase_down"]
+    },
+    {
+      "id": "evt-003",
+      "type": "three_pointer",
+      "timestamp": "Q1 08:45",
+      "quarter": 1,
+      "player": "Jayson Tatum",
+      "team": "Celtics",
+      "description": "Jayson Tatum answers back with a contested three-pointer from the corner.",
+      "importance": "medium",
+      "tags": ["contested", "response"]
+    },
+    {
+      "id": "evt-004",
+      "type": "dunk",
+      "timestamp": "Q2 01:15",
+      "quarter": 2,
+      "player": "Anthony Davis",
+      "team": "Lakers",
+      "description": "Anthony Davis slams home an alley-oop from LeBron with authority.",
+      "importance": "high",
+      "tags": ["alley_oop", "highlight_reel", "teamwork"]
+    },
+    {
+      "id": "evt-005",
+      "type": "steal",
+      "timestamp": "Q2 04:30",
+      "quarter": 2,
+      "player": "Jaylen Brown",
+      "team": "Celtics",
+      "description": "Jaylen Brown strips the ball and takes it coast to coast for a layup.",
+      "importance": "medium",
+      "tags": ["fast_break", "transition"]
+    },
+    {
+      "id": "evt-006",
+      "type": "three_pointer",
+      "timestamp": "Q2 09:55",
+      "quarter": 2,
+      "player": "Derrick White",
+      "team": "Celtics",
+      "description": "Derrick White hits a buzzer-beating three at the end of the first half.",
+      "importance": "high",
+      "tags": ["buzzer_beater", "clutch", "momentum"]
+    },
+    {
+      "id": "evt-007",
+      "type": "dunk",
+      "timestamp": "Q3 03:20",
+      "quarter": 3,
+      "player": "LeBron James",
+      "team": "Lakers",
+      "description": "LeBron James throws down a thunderous one-handed dunk on a fast break.",
+      "importance": "high",
+      "tags": ["fast_break", "highlight_reel", "poster"]
+    },
+    {
+      "id": "evt-008",
+      "type": "assist",
+      "timestamp": "Q3 06:48",
+      "quarter": 3,
+      "player": "LeBron James",
+      "team": "Lakers",
+      "description": "LeBron delivers a no-look pass to Davis for an easy bucket.",
+      "importance": "medium",
+      "tags": ["no_look", "teamwork", "flashy"]
+    },
+    {
+      "id": "evt-009",
+      "type": "three_pointer",
+      "timestamp": "Q3 10:30",
+      "quarter": 3,
+      "player": "Jayson Tatum",
+      "team": "Celtics",
+      "description": "Jayson Tatum nails a step-back three to cut the lead to two.",
+      "importance": "high",
+      "tags": ["clutch", "step_back", "momentum"]
+    },
+    {
+      "id": "evt-010",
+      "type": "block",
+      "timestamp": "Q4 01:05",
+      "quarter": 4,
+      "player": "Jaylen Brown",
+      "team": "Celtics",
+      "description": "Jaylen Brown comes from the weak side for a game-changing block.",
+      "importance": "high",
+      "tags": ["defensive", "weak_side", "clutch"]
+    },
+    {
+      "id": "evt-011",
+      "type": "three_pointer",
+      "timestamp": "Q4 07:22",
+      "quarter": 4,
+      "player": "LeBron James",
+      "team": "Lakers",
+      "description": "LeBron James hits a contested three with the shot clock winding down.",
+      "importance": "high",
+      "tags": ["clutch", "contested", "shot_clock"]
+    },
+    {
+      "id": "evt-012",
+      "type": "free_throw",
+      "timestamp": "Q4 10:45",
+      "quarter": 4,
+      "player": "Jayson Tatum",
+      "team": "Celtics",
+      "description": "Jayson Tatum makes both free throws under pressure to tie the game.",
+      "importance": "high",
+      "tags": ["clutch", "pressure", "tie_game"]
+    },
+    {
+      "id": "evt-013",
+      "type": "steal",
+      "timestamp": "Q4 11:15",
+      "quarter": 4,
+      "player": "LeBron James",
+      "team": "Lakers",
+      "description": "LeBron intercepts the inbound pass for a crucial turnover.",
+      "importance": "high",
+      "tags": ["clutch", "defensive", "game_changer"]
+    },
+    {
+      "id": "evt-014",
+      "type": "dunk",
+      "timestamp": "Q4 11:30",
+      "quarter": 4,
+      "player": "LeBron James",
+      "team": "Lakers",
+      "description": "LeBron finishes with a game-winning dunk off the steal! The arena erupts.",
+      "importance": "critical",
+      "tags": ["game_winner", "clutch", "highlight_reel", "iconic"]
+    },
+    {
+      "id": "evt-015",
+      "type": "foul",
+      "timestamp": "Q2 06:00",
+      "quarter": 2,
+      "player": "Anthony Davis",
+      "team": "Lakers",
+      "description": "Anthony Davis picks up his third foul on a questionable call.",
+      "importance": "low",
+      "tags": ["foul_trouble"]
+    }
+  ],
+  "user_preferences": {
+    "example_1": {
+      "favorite_player": "LeBron James",
+      "favorite_team": null
+    },
+    "example_2": {
+      "favorite_player": null,
+      "favorite_team": "Celtics"
+    },
+    "example_3": {
+      "favorite_player": "Anthony Davis",
+      "favorite_team": "Lakers"
+    }
+  }
+}

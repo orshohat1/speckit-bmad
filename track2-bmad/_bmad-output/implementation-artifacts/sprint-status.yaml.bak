@@ -1,0 +1,106 @@
+# generated: 2026-02-17
+# project: AI Highlight Selector (Track2 - BMAD)
+# project_key: speckit-bmad-track2
+# tracking_system: file-system
+# story_location: _bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2026-02-17
+project: AI Highlight Selector (Track2 - BMAD)
+project_key: speckit-bmad-track2
+tracking_system: file-system
+story_location: _bmad-output/implementation-artifacts
+
+development_status:
+  epic-1: in-progress
+  1-1-game-event-data-model: ready-for-dev
+  1-2-user-preference-data-model: backlog
+  1-3-score-breakdown-data-model: backlog
+  1-4-highlight-output-model: backlog
+  1-5-json-serialization-support: backlog
+  epic-1-retrospective: optional
+
+  epic-2: backlog
+  2-1-base-importance-scoring: backlog
+  2-2-player-preference-boost: backlog
+  2-3-team-preference-boost: backlog
+  2-4-context-tag-boosts: backlog
+  2-5-total-score-calculation-with-breakdown: backlog
+  epic-2-retrospective: optional
+
+  epic-3: backlog
+  3-1-sort-events-by-score: backlog
+  3-2-deterministic-tie-breaking: backlog
+  3-3-force-include-critical-events: backlog
+  3-4-select-5-8-highlights: backlog
+  3-5-favorite-player-representation-rule: backlog
+  3-6-main-select-highlights-function: backlog
+  epic-3-retrospective: optional
+
+  epic-4: backlog
+  4-1-explanation-template-system: backlog
+  4-2-importance-based-explanation-phrases: backlog
+  4-3-personalization-explanation-phrases: backlog
+  4-4-context-tag-explanation-phrases: backlog
+  4-5-complete-explanation-generation: backlog
+  epic-4-retrospective: optional
+
+  epic-5: backlog
+  5-1-command-line-argument-parsing: backlog
+  5-2-json-input-loading: backlog
+  5-3-player-and-team-validation: backlog
+  5-4-formatted-highlight-output: backlog
+  5-5-main-cli-entry-point-with-run-py: backlog
+  5-6-only-flag-implementation: backlog
+  epic-5-retrospective: optional
+
+  epic-6: backlog
+  6-1-empty-event-list-handling: backlog
+  6-2-null-and-missing-preference-handling: backlog
+  6-3-unknown-importance-level-handling: backlog
+  6-4-missing-optional-field-handling: backlog
+  6-5-malformed-data-validation: backlog
+  6-6-zero-or-insufficient-events-edge-cases: backlog
+  epic-6-retrospective: optional
+
+  epic-7: backlog
+  7-1-data-model-unit-tests: backlog
+  7-2-scoring-engine-unit-tests: backlog
+  7-3-selection-and-ranking-unit-tests: backlog
+  7-4-explanation-generation-unit-tests: backlog
+  7-5-edge-case-integration-tests: backlog
+  7-6-end-to-end-integration-tests: backlog
+  7-7-performance-benchmark-tests: backlog
+  7-8-test-coverage-and-quality-gates: backlog
+  7-9-code-quality-standards-black-mypy-linting: backlog
+  7-10-project-documentation-and-readme: backlog
+  7-11-sample-data-and-demo-script: backlog
+  epic-7-retrospective: optional

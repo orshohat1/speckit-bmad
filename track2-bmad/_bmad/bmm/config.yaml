@@ -1,0 +1,11 @@
+# BMad Method Configuration
+# This file configures the agent behavior and output settings
+
+# User information
+user_name: "Or"
+
+# Communication preferences
+communication_language: "English"
+
+# Output folder for all generated artifacts (relative to project root)
+output_folder: "_bmad-output"
